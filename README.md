@@ -1,4 +1,4 @@
-# Tekoälyagentit - Oppimateriaali
+# Tekoälyagentit - Opi seuraamaan nopeasti kehittyvien agenttien kyvykkyyksiä
 
 Tämä on oppimateriaali tekoälyagenteista, joka on suunniteltu 90 minuutin koulutuskokoukselle. Materiaali sisältää sekä koodausharjoituksia että lukuharjoituksia.
 

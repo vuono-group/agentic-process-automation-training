@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Tekoälyagentit - Oppimateriaali</h1>
+        <h1>Opi oppimaan nopeasti kehittyvistä tekoälyagenteista</h1>
         <p class="subtitle">20.5.2025 – 90 min Oppimaan oppimisen koulutus</p>
     </header>
 
@@ -28,11 +28,24 @@
 
             <div class="step">
                 <h4>2. Koodin testaus</h4>
-                <ul>
-                    <li>Lue "Building a Voice Assistant with the Agents SDK" -ohje</li>
-                    <li>Kopioi ohjeessa annettu koodi omaan Colab-työkirjaan</li>
-                    <li>Korvaa API-avain ja vektoritietokannan ID ohjeiden mukaisesti</li>
-                </ul>
+                <h3 class="highlight">Testaa koodia</h3>
+                <p><b>Lue</b> <i>Building a Voice Assistant with the Agents SDK</i> -ohje.<br>
+                <span class="red">Kopioi ohjeessa annettu koodi omaan Colab-työkirjaan ja aja se <b>Run</b>-painikkeella.</span></p>
+                <p><b>Kohdassa <span class="highlight">Setup</span> korvaa rivi:</b></p>
+                <pre><code>set_default_openai_key("YOUR_API_KEY")</code></pre>
+                <p><b>seuraavalla rivillä:</b></p>
+                <pre><code>set_default_openai_key("sk-proj-fQhEJIJjusaV3gAceRVq-rQGh_apYDXVcyzULpzqMloetlp2JDBilq3An-g7A2aG66t1_zaJIT3BlbkFJhjnYmhljh1i8C15oYGoCAdu1BPHSWWeK4uL40JB85dLOlOBQxeS8zdeB70hthyZj2HWmfUJwwA")</code></pre>
+                <p><b>Kohdassa <span class="highlight">Knowledge agent</span> älä luo omaa vektoritietokantaa.</b></p>
+                <p><b>Korvaa rivi:</b></p>
+                <pre><code>vector_store_ids=["VECTOR_STORE_ID"]</code></pre>
+                <p><b>Mikon tietovaraston arvolla:</b></p>
+                <pre><code>vector_store_ids=["vs_6825b6d72c848191b82ab75051fc73ac"]</code></pre>
+                <p class="info">Tämä tietovarasto sisältää Class & Ohlssonin viimeisen paperille painetun tuoteluettelon vuodelta 2018 (600 sivua).</p>
+                <p class="red"><b>Tracing ja äänen käsittely tehdään lukuharjoituksena.</b></p>
+                <div class="tracing-section">
+                    <img src="Tracing_osuus.png" alt="Tracing-osuus esimerkki" style="max-width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin:1em 0;">
+                    <p class="info"><b>Tracing:stä eteenpäin on vain luetun ymmärryksen harjoitus.</b></p>
+                </div>
             </div>
         </section>
 
@@ -41,8 +54,8 @@
             
             <div class="exercise">
                 <h3>Puheasiakaspalveluagentti</h3>
-                <p>Lue <a href="https://cookbook.openai.com/examples/agents_sdk/app_assistant_voice_agents" target="_blank">Building a Voice Assistant with the Agents SDK</a> ja vastaa seuraaviin kysymyksiin:</p>
-                <ul>
+                <p>Lue <a href="https://cookbook.openai.com/examples/agents_sdk/app_assistant_voice_agents" target="_blank">Building a Voice Assistant with the Agents SDK</a> Tracing ja äänen käsittely osuudet ja vastaa seuraaviin kysymyksiin:</p>
+                <ul class="question-list">
                     <li>Ovatko ääniagentit reaaliaikaisia?</li>
                     <li>Tukevatko ääniagentit suomea ja ruotsia?</li>
                     <li>Kuinka kallista ääniagenttien kehittäminen omaan käyttöön on?</li>
@@ -51,11 +64,20 @@
             </div>
 
             <div class="exercise">
-                <h3>Raportointi ja agentin ymmärtäminen</h3>
-                <p>Tutustu <a href="https://github.com/google/adk-samples" target="_blank">Google ADK samples</a> ja vastaa kysymyksiin:</p>
-                <ul>
+                <h3>Raportointipalvelu agentin dokumentaation lukuharjoitus</h3>
+                <p><b>Lukuharjoitus: Raportointipalvelua tuottavan agentin dokumentaation ymmärtämisestä</b></p>
+                <p>Lue <a href="https://github.com/google/adk-samples" target="_blank">Google ADK samples</a> -esittely ja vastaa alla oleviin kysymyksiin:</p>
+                <ul class="question-list">
                     <li>Kuinka vaikea Google ADK:n sample:n kokeilu on?</li>
                     <li>Kuinka vaikeaa Google ADK:n sample:n muuttaminen tuotantosovellukseksi on?</li>
+                </ul>
+                <p>Lue seuraava Google ADK sample -kuvaus ja vastaa alla oleviin kysymyksiin:<br>
+                <a href="https://github.com/google/adk-samples/tree/main/agents/data-science" target="_blank">https://github.com/google/adk-samples/tree/main/agents/data-science</a></p>
+                <ul class="question-list">
+                    <li>Mistä sanoista lyhenne NL2SQL muodostuu?</li>
+                    <li>Mikä on Vertex AI ja mihin tuoteryhmään se kuuluu?</li>
+                    <li>Mitä ovat AI-agentin testit Google Agent Development Kit -esimerkissä?</li>
+                    <li>Mitä tarkoittavat AI-agentin evaluaatiot samassa esimerkissä?</li>
                 </ul>
             </div>
         </section>
